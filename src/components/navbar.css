@@ -5,6 +5,9 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .links {
@@ -18,4 +21,10 @@
   color: white;
   margin-left: 20px;
   font-size: 25px;
+}
+
+.cartHighlight {
+  font-size: 60px;
+  color: red;
+  margin-left: 0;
 }

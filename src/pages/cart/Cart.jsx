@@ -9,6 +9,7 @@ export const Cart = () => {
   const { cartItems, getTotalCartAmount } = useContext(ShopContext);
   const totalAmount = getTotalCartAmount();
   const navigate = useNavigate();
+  console.log("total 2222", totalAmount);
   return (
     <div className="cart">
       <div>
@@ -23,7 +24,7 @@ export const Cart = () => {
       </div>
       {totalAmount > 0 ? (
         <div className="checkout">
-          <p>Total: INR{totalAmount} </p>
+          <p>Total: ₹ {totalAmount} </p>
           <button onClick={() => navigate("/")}>Continue Shopping</button>
           <button>Checkout</button>
         </div>

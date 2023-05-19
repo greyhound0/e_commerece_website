@@ -20,10 +20,12 @@ export const ShopContextProvider = (props) => {
       if (cartItems[item] > 0) {
         let itemInfo = PRODUCTS.find((product) => product.id === Number(item));
         totalAmount += cartItems[item] * itemInfo.price;
+        console.log("total logic", itemInfo.price);
       }
     }
     return totalAmount;
   };
+  console.log("total 3333", getTotalCartAmount());
   const addToCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
   };
